@@ -1,38 +1,26 @@
-html,
-body {
-    height: 100%;
-}
-
+/* General */
 .panel{
 	margin: 10 auto;
 	min-height: 100px;
 	min-width: 500px;
-	width: 300px;
-    position: relative;
+	width: 300px; 
+	position: relative;
 	font-family: Verdana;
 	background-color: #FEFEFE;
 	border: 1px solid #EFEFEF;
 	border-radius: 5px;
 }
 
-.panel-body{
-	padding-bottom: 20px;
-	min-height: 100px;
-}
-
-.panel-footer{
-	min-height: 30px;
-	margin-bottom: 0px;
-	position:absolute;
-	padding: 0 0 0 5;
-	width: 100%;
-	bottom:0;
-	left: 0;
+.panel-default .panel-heading{
 	background-color: #FEFEFE;
-	border-top-style: solid;
-	border-top-color: #FEFEFE; 	
 }
 
+.shout-panel{
+	margin-top: 10px;
+}
+
+
+/* Shout Header*/
 .panel-heading{
 	border-top-width: 0px;
 	border-bottom-width: 0px;
@@ -43,8 +31,39 @@ body {
 	border-top-color: #FEFEFE; 
 }
 
-.panel-default .panel-heading{
+.user-avatar{
+	border: 1px solid #EFEFEF;
+	border-radius: 5px;
+}
+
+.shout-options{
+	margin: 10 15 0 0;
+}
+
+
+/* Shout Content */
+.panel-body{
+	clear:both;
+	min-height: 180px;
+}
+
+.shout-content{
+	margin: 40 5 40 5;
+}
+
+
+/* Shout Footer */
+.panel-footer{
+	min-height: 30px;
+	margin: 10 0 10 0;
+	position:absolute;
+	padding: 0 0 0 0;
+	width: 100%;
+	bottom:0;
+	left: 0;
 	background-color: #FEFEFE;
+	border-top-style: solid;
+	border-top-color: #FEFEFE; 	
 }
 
 #opciones{
@@ -56,11 +75,13 @@ body {
 }
 
 .op{
-	padding: 7 0 7 12;
-	min-width: 40px;
+/*	margin-top: 10px;
+*/	min-width: 40px;
 	min-height: 30px;
-	display: inline-block;	
+	display: inline-block;
+	color:gray;	
 }
+
 
 .op-open span:hover, .op-open span:active{
 	color: black;
@@ -80,7 +101,11 @@ body {
 
 .op-extra{
 	color:gray;
-	float:right !important;
+}
+
+.shout-info{
+	padding-left: 10px;
+	padding-bottom: 10px;
 }
 
 #timestamp, #tipo-shout {
@@ -99,20 +124,12 @@ body {
 	margin-right: 10px;
 }
 
-.user-avatar{
-	border: 1px solid #EFEFEF;
-	border-radius: 5px;
-}
-
-.shout-options span{
-	padding: 10 10 0 0;
-	min-height: 20px;
-	height: 20px;
-}
-
-.tool{
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color:#EFEFEF;
+/* Comments */
+#comment-panel{
+	min-height: 190px;
+	min-width: 450px;
+	height: 190px;
+	width: 450px;
+	margin-left: 25px;
 }
 
