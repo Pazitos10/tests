@@ -1,14 +1,65 @@
 /* General */
+body {
+    background: rgba(0, 0, 0, 0) url("http://k31.kn3.net/taringa/3/4/8/3/1/2/9/pazitos10/bg.jpg?2441") repeat scroll 0 50px;
+}
+
+@font-face {
+    font-family: 'Slim Jim'; /*a name to be used later*/
+    src: url('../fonts/SlimJim.ttf'); /*URL to font*/
+}
+.contenido{
+	width: 100%;
+}
+
+.nav-taringa{
+	background-color: #1977E8;
+	border-color: #1977E8;
+}
+
+.nav-taringa .navbar-nav > .active > a, .nav-taringa .navbar-nav > .active > a:focus, .nav-taringa .navbar-nav > .active > a:hover{
+	background-color: #055ABF;
+	color: #fff;
+} /*Active things in nav - Don't touch :) */
+
+.nav-taringa .navbar-brand{
+	color:white;
+}
+
+.nav-taringa .navbar-brand:hover{
+	background-color: #055ABF;
+
+}
+.navbar-brand {
+    font-family: 'Slim Jim';
+    font-size: 35px;
+}
+
+.nav-taringa .navbar-nav > li > a:focus, .nav-taringa .navbar-nav > li > a:hover {
+    background-color: #055ABF;
+    color: #fff;
+}
+
+.nav-taringa .navbar-nav > li > a{
+	color:#fff;
+	font-weight: bold;
+}
+
+.badge{
+	margin-left: 5px;
+	background-color: #5699E9;
+}
+
 .panel{
 	margin: 10 auto;
 	min-height: 100px;
 	min-width: 500px;
-	width: 300px; 
+	width: 600px; 
 	position: relative;
-	font-family: Verdana;
 	background-color: #FEFEFE;
-	border: 1px solid #EFEFEF;
+	border: 1px solid #DDDDDD;
 	border-radius: 5px;
+	height: auto;
+	margin-bottom: 10px;
 }
 
 .panel-default .panel-heading{
@@ -19,21 +70,41 @@
 	margin-top: 10px;
 }
 
-
-/* Shout Header*/
-.panel-heading{
-	border-top-width: 0px;
-	border-bottom-width: 0px;
-	padding: 5 10 0 10;
-	min-height: 20px;
-	width: 100%;
-	border-top-style: solid;
-	border-top-color: #FEFEFE; 
+.shout{
+	padding-right: 15px;
+	border-right: 1px dashed #dddddd;
 }
 
+.shout-page{
+	width: 915px;
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	background-color: #FEFEFE;
+}
+
+.btn-primary-inverse{
+	border: 1px solid #337ab7;
+}
+
+.btn-primary-inverse:hover, .btn-primary-inverse:hover span{
+	color:white;
+	background-color: #337ab7;
+}
+
+
+/* Shout Header*/
+
 .user-avatar{
+	float:left !important;
 	border: 1px solid #EFEFEF;
-	border-radius: 5px;
+	border-radius: 4px;
+	display:inline-block;
+}
+
+.user-info{
+	margin-left: 10px;
+	display: inline-block;
+	height: 40px;
 }
 
 .shout-options{
@@ -44,7 +115,7 @@
 /* Shout Content */
 .panel-body{
 	clear:both;
-	min-height: 180px;
+	min-height: 130px;
 }
 
 .shout-content{
@@ -54,20 +125,26 @@
 
 /* Shout Footer */
 .panel-footer{
-	min-height: 30px;
+	min-height: 10px;
 	margin: 10 0 10 0;
 	position:absolute;
 	padding: 0 0 0 0;
-	width: 100%;
+	width: 98%;
 	bottom:0;
-	left: 0;
+	left: 1%;
 	background-color: #FEFEFE;
 	border-top-style: solid;
-	border-top-color: #FEFEFE; 	
+	border-top-color: #CCCCCC;
+}
+
+.shout-info{
+	padding-left: 10px;
+	padding-bottom: 10px;
 }
 
 #opciones{
 	float: right !important;
+	margin-right: 10px;
 }
 
 #opciones a{
@@ -75,13 +152,15 @@
 }
 
 .op{
-/*	margin-top: 10px;
-*/	min-width: 40px;
+	min-width: 40px;
 	min-height: 30px;
 	display: inline-block;
 	color:gray;	
 }
 
+.op span{
+	margin-right: 2px;
+}
 
 .op-open span:hover, .op-open span:active{
 	color: black;
@@ -103,20 +182,17 @@
 	color:gray;
 }
 
-.shout-info{
-	padding-left: 10px;
-	padding-bottom: 10px;
-}
 
-#timestamp, #tipo-shout {
+
+#tipo-shout {
 	font-family: sans-serif;
 	float: left !important;
 	padding-top: 10px;
 }
 
-#timestamp{
-	padding-top: 13px;
-	font-size: 10px;
+.timestamp{
+	font-size: 12px;
+	color: gray;
 }
 
 #tipo-shout {
@@ -126,10 +202,93 @@
 
 /* Comments */
 #comment-panel{
-	min-height: 190px;
-	min-width: 450px;
-	height: 190px;
-	width: 450px;
-	margin-left: 25px;
+	min-width: 500px;
+	height: auto;
+	width: 580px;
+	margin-left: 10px;
+	margin-top: -25px;
+	position: inherit;
 }
 
+#new-comment{
+	min-height: 190px;
+}
+
+.list-group{
+	height: auto;
+	margin-bottom: 0px;
+}
+
+.list-group-item{
+	border-top: 2px solid #DFDFDF;
+	border-right: none;
+	border-left: none;
+	border-bottom: none;
+}
+
+.list-group-item:first-child{
+	border-top: none;
+}
+
+.comment-text{
+	margin-top: 10px;
+}
+
+/* Shout Author */
+
+.shout-author img{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+.author-img{
+	display: inline-block;
+	margin-right: 10px;	
+}
+
+.author-info{
+	margin-top: 10px;
+	display: inline-block;
+	line-height: 20px;
+}
+
+.value{
+	margin-left: 5px;
+}
+
+
+.followers{
+	color: #138BD2;
+}
+
+.score{
+	color: #E79B07;
+}
+
+.shouts{
+	color:#DA08B9;
+}
+
+.sex{
+	color: #157DD3;
+}
+
+.shout-options{
+	margin-top: 30px;
+	margin-left: 10px;
+	height: 50px;
+	width: 50px;
+}
+
+.author-nick{
+	color:#006595;
+	margin-left: 35px;
+	margin-top: 5px;
+	font-size: 16px;
+}
+
+.contenido{
+	margin-top: 50px;
+}
